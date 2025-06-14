@@ -7,11 +7,11 @@ app.use(express.json());
 
 // Einfache Render-Funktion
 app.post('/render', (req, res) => {
-    const { content } = req.body;
-    if (!content) {
+    const data = "Hello WOrld";
+    if (!data) {
         return res.status(400).json({ error: 'Kein Inhalt zum Rendern angegeben' });
     }
-    const renderedContent = `<html><body><h1>${content}</h1></body></html>`;
+    const renderedContent = `<html><body><h1>${data}</h1></body></html>`;
     res.send(renderedContent);
 });
 
