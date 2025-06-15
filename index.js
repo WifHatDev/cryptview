@@ -10,7 +10,7 @@ setInterval(() => {
 // GET-Route für einfache Textausgabe
 app.get('/', (req, res) => {
     console.log("Anfrage erhalten!"); // Zeigt "Hallo Welt" in der Konsole
-    res.send(counter); // Zeigt "Hallo Welt" im Webbrowser
+    res.send(counter.toString()); // Zeigt "Hallo Welt" im Webbrowser
 });
 
 // Server starten
